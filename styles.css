@@ -22,6 +22,8 @@ body {
     min-width: 320px;
     color: white; /* Set text color to white */
     font-size: 1.5em; /* Increase font size further */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
 #main-form {
@@ -30,7 +32,7 @@ body {
     -webkit-backdrop-filter: blur(10px); /* For Safari */
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    margin: 0 auto;
+    margin: 20px auto; /* Add margin for spacing */
     border-radius: 16px;
     width: 75%;
     max-width: 900px;
@@ -148,13 +150,16 @@ input[type="checkbox"] {
 /*-------------Mobile View (For Responsive Design)--------------*/
 
 @media screen and (max-width: 520px) {
+    body {
+        font-size: 1.2em; /* Adjust font size for mobile */
+    }
     .labels {
         width: 100%;
         text-align: left;
     }
     .rightTab {
-        width: 80%;
-        float: left;
+        width: 100%; /* Ensure full width on mobile */
+        float: none; /* Remove float */
     }
     .input-field {
         width: 100%;
@@ -165,4 +170,9 @@ input[type="checkbox"] {
     h2 {
         font-size: 15px;
         padding: 2px;
-    } }
+    }
+    #main-form {
+        width: 90%; /* Increase width on mobile */
+        margin: 10px auto; /* Adjust margin for spacing */
+    }
+}
